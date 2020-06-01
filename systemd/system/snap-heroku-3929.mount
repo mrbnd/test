@@ -1,0 +1,13 @@
+[Unit]
+Description=Mount unit for heroku, revision 3929
+Before=snapd.service
+
+[Mount]
+What=/var/lib/snapd/snaps/heroku_3929.snap
+Where=/snap/heroku/3929
+Type=squashfs
+Options=nodev,ro,x-gdu.hide
+LazyUnmount=yes
+
+[Install]
+WantedBy=multi-user.target
